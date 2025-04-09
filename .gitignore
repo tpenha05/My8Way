@@ -1,0 +1,47 @@
+# ========== Unity ==========
+
+[Linha essencial para Unity]
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Diretórios gerados pelo Unity (não versionar)
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+UserSettings/
+
+# IDEs
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.bak
+*.old
+*.tmp
+
+# Arquivos de build
+*.apk
+*.aab
+*.exe
+*.app
+*.dll
+*.pdb
+
+# Unity e Rider
+*.sln
+*.csproj
+*.unityproj
+*.pidb
+*.userprefs
+
+# Pacotes
+Packages/packages-lock.json
+
+# WebGL builds
+BuildWebGL/
