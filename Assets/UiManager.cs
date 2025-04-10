@@ -4,6 +4,7 @@ using UnityEngine;
 public class UiManager : MonoBehaviour
 {
     public GameObject EndGamePanel;
+    public GameObject VidaUI;
 
     void Start()
     {
@@ -16,6 +17,8 @@ public class UiManager : MonoBehaviour
         if (GameController.GameOver)
         {
             EndGamePanel.SetActive(true);
+            VidaUI.SetActive(false);
+            FindObjectOfType<Timer>().StopTimer();
         }
     }
 }

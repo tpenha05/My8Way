@@ -5,12 +5,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     AudioSource audio;
 
+    private SpriteRenderer sr;
+
     public float speed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {   
-        print(GameController.GameOver);
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         audio = GetComponent<AudioSource>();
     }
 
@@ -19,6 +21,16 @@ public class PlayerMovement : MonoBehaviour
     {
         float  moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+
+        if (moveHorizontal > 0)
+        {
+            sr.flipX = false; 
+        }
+        else if (moveHorizontal < 0)
+        {
+            sr.flipX = true;
+        }
+
 
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
